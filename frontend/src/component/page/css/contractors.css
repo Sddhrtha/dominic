@@ -1,0 +1,17 @@
+.contractor-pageHolder{
+    color: red;
+}
+
+.contractor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    margin-top: 20px;
+    padding-top: 5%;
+}

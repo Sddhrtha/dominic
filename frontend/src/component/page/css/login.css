@@ -1,0 +1,77 @@
+.loginPage-holder{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.loginForm-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    min-width: 25%;
+    margin: auto;
+}
+
+form.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+}
+
+.loginform-row{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginform-row > label{
+    color: #48505E;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 0 6px 0;;
+}
+
+.loginform-row > input{
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.loginform-row > input::placeholder{
+    color: #667085;
+}
+
+.loginform-row > section{
+    display: flex;
+    flex-direction: row-reverse;
+    gap:5px;
+}
+
+.loginform-row > span{
+    color: #1366D9;
+    cursor: pointer;
+}
+
+.loginform-row > span:hover{
+    text-decoration: underline;
+}
+
+.extraFormButtons{
+    flex-direction: row !important;
+    gap:30px;
+}
+
+.extraFormButtons > section > label{ cursor: pointer;}
+
+.loginform-row > button{
+    border: 1px solid #1366D9;
+    border-radius: 4px;
+    background-color: #1366D9;
+    color: #fff;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+}

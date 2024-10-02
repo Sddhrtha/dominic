@@ -1,0 +1,52 @@
+.parentHome-pageHolder{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f1f3;
+    gap:2px;
+}
+
+.search-bar {
+    height: 100%;
+    width: fit-content;
+    border: 1px red solid;
+}
+
+.ant-menu-title-content {
+    font-size: large;
+}
+
+.ant-menu-item-icon {
+    font-size: larger;
+    margin-right: 10px;
+}
+.profile-avatar{
+    float: right;
+    height: 100%;
+    margin-right: 2%
+}
+
+.parentHome-Sidebar{
+    width: 20%;
+}
+
+.parentHome-content{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sider-logo { 
+    height: 64px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+.proper {
+    width: fit-content;
+    margin: auto;
+    border: 1px red solid;
+    color: white;
+}

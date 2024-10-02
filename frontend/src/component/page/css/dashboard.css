@@ -1,0 +1,26 @@
+.dashboards-page-holder > section{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dashboard-leftSection > div,
+.dashboard-rightSection> div{
+}
+
+
+.dashboards-page-holder{
+    padding: 12px;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    gap: 12px;
+}
+
+.dashboard-leftSection{
+    flex: 1 1 90%;
+}
+
+.dashboard-rightSection{
+    flex: 0 0 30%;
+}
