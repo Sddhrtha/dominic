@@ -16,7 +16,7 @@ const OrderProcessing = () => {
     setIsLoading(true);
     const headers = { 'Authorization': `Bearer ${auth.token}`};
     axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-    axios.get(`${process.env.BACKEND_URL}/order`, { headers })
+    axios.get(`${process.env.REACT_APP_API_URL}/order`, { headers })
     .then((result)=>{
         setIsLoading(false);
         const formatData = result.data.map((d, index) => { d['key'] = index; return d;});
@@ -31,7 +31,7 @@ const OrderProcessing = () => {
     try {
         const headers = { 'Authorization': `Bearer ${auth.token}`};
         axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-        axios.post(`${process.env.BACKEND_URL}/order/process-order`,{ id: orderId, status: 'Accepted'}, { headers })
+        axios.post(`${process.env.REACT_APP_API_URL}/order/process-order`,{ id: orderId, status: 'Accepted'}, { headers })
         .then((response)=>{
             updateOrderStatus(orderId, 'Accepted');
             message.success('Order accepted');
@@ -59,7 +59,7 @@ const OrderProcessing = () => {
     try {
         const headers = { 'Authorization': `Bearer ${auth.token}`};
         axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-        axios.post(`${process.env.BACKEND_URL}/order/update-delivery`,{ id: orderId, status }, { headers })
+        axios.post(`${process.env.REACT_APP_API_URL}/order/update-delivery`,{ id: orderId, status }, { headers })
         .then((response)=>{
             updateDeliveryStatus(orderId, status);
             message.success('Order accepted');

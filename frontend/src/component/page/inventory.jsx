@@ -177,7 +177,7 @@ const Inventory = () => {
     const { name, sku, category, manufacturer, modelNumber, unit, description } = values;
     setIsLoading(true);
     try {
-      const response = await axios.post(`${process.env.BACKEND_URL}/product/add `, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/product/add `, {
         name,
         sku,
         category,
@@ -202,7 +202,7 @@ const Inventory = () => {
     const { product, quantity } = values;
     setIsLoading(true);
     try {
-      const response = await axios.post(`${process.env.BACKEND_URL}/order/place-order`, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/order/place-order`, {
         product,
         quantity,
       });
@@ -223,7 +223,7 @@ const Inventory = () => {
       setIsLoading(true);
       const headers = { 'Authorization': `Bearer ${auth.token}`};
       axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-      axios.get(`${process.env.BACKEND_URL}/product`, { headers })
+      axios.get(`${process.env.REACT_APP_API_URL}/product`, { headers })
       .then((result)=>{
           setIsLoading(false);
           setInventoryData(result.data);

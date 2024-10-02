@@ -74,7 +74,7 @@ const Contractors = () => {
     const timestamp = new Date().toISOString();
 
     try {
-      await axios.post(`${process.env.BACKEND_URL}/contractor/add`, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/contractor/add`, {
         ...values,
         created_at: timestamp,
       });
@@ -93,7 +93,7 @@ const Contractors = () => {
     setLoading(true);
     const headers = { 'Authorization': `Bearer ${auth.token}`};
     axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-        axios.get(`${process.env.BACKEND_URL}/contractor`, { headers } )
+        axios.get(`${process.env.REACT_APP_API_URL}/contractor`, { headers } )
         .then((result)=>{
             setLoading(false);
             const formatData = result.data.map((d, index) => { d['key'] = index; return d;});

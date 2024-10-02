@@ -15,9 +15,11 @@ const Login = () => {
     const navigate = useNavigate();
     const { auth, setAuth } = useAuth();
 
+    console.log(process.env.REACT_APP_API_URL);
+
     const loginSubmitHandler = async (values) =>{
         axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-        axios.post(`${process.env.BACKEND_URL}/users/login`, values)
+        axios.post(`${process.env.REACT_APP_API_URL}/users/login`, values)
         .then(response => {
             setAuth({user: response.data.user, roles: [response.data.role], token: response.data.token});
             if(response.data.role === 'manager') navigate('/inventory');
